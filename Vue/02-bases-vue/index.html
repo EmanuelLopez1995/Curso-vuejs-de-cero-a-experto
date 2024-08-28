@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue js intro</title>
+</head>
+<body>
+
+    <!-- Control absoluto de este div Vue -->
+    <div id="myApp">
+        <h1>Batman quotes</h1>
+        <input type="text" v-model="newQuote" @keypress.enter="addQuote">
+        <hr>
+        <ul>
+            <li v-for="({quote, author}, index) in quotes">{{index}} - {{quote}}</li>
+        </ul>
+    </div>
+
+
+     
+     <script src="app.js"></script>
+</body>
+</html>
